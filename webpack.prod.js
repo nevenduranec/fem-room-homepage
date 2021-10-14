@@ -55,17 +55,8 @@ module.exports = {
                 ],
             },
             {
-                // Load all images as base64 encoding if they are smaller than 8192 bytes
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            name: '[name].[hash:20].[ext]',
-                            limit: 8192,
-                        },
-                    },
-                ],
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             },
             {
                 // Load all icons
@@ -75,6 +66,28 @@ module.exports = {
                         loader: 'file-loader',
                     },
                 ],
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+                options: {
+                    sources: {
+                        list: [
+                            // All default supported tags and attributes
+                            "...",
+                            {
+                                tag: "img",
+                                attribute: "data-srcset",
+                                type: "srcset",
+                            },
+                            {
+                                tag: "source",
+                                attribute: "data-srcset",
+                                type: "srcset",
+                            },
+                        ],
+                    }
+                }
             },
         ],
     },

@@ -11,26 +11,18 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Very dark blue (main background): hsl(233, 47%, 7%)
-- Dark desaturated blue (card background): hsl(244, 38%, 16%)
-- Soft violet (accent): hsl(277, 64%, 61%)
-
-### Neutral
-
-- White (main heading, stats): hsl(0, 0%, 100%)
-- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
-- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+- Dark Gray: hsl(0, 0%, 63%)
+- Black: hsl(0, 0%, 0%)
+- White: hsl(0, 0%, 100%)
+- Very Dark Gray: hsl(0, 0%, 27%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 15px
+- Font size: 12px
 
 ### Font
 
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 400, 700
-
-- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
-- Weights: 400
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 500, 600, 700
