@@ -32,8 +32,9 @@ let height = 0;
 let slideElem;
 
 slides.forEach(slide => {
-    const slideHeight = slide.getBoundingClientRect().height;
-    if(slideHeight > height) {
+    const slideHeight = slide.offsetHeight;
+
+    if (slideHeight > height) {
         slideElem = slide;
         height = slideHeight;
     }
@@ -44,10 +45,19 @@ slides.forEach(slide => {
     } else {
         a.removeAttribute('tabindex', '-1');
     }
+});
 
+slides.forEach(slide => {
     slide.classList.remove('is-relative');
 });
+
 slideElem.classList.add('is-relative');
+
+setTimeout(() => {
+    slides.forEach(slide => {
+        slide.classList.add('has-transition');
+    });
+}, 200);
 
 const slideTo = (dir) => {
 

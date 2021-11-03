@@ -26,6 +26,7 @@ html {
     font-size: 100%;
     color: var(--gray);
     font-family: 'Spartan', sans-serif;
+    overflow-y: scroll; 
 }
 
 picture,
@@ -231,7 +232,7 @@ main {
     h2 {
         font-weight: normal;
         color: var(--black);
-        font-size: min(max(20px, 5vw), 40px);
+        font-size: min(max(20px, 4vw), 40px);
         margin-bottom: 20px;
     }
 
@@ -339,7 +340,10 @@ main {
             opacity: 0;
             pointer-events: none;
             transform: translate(0, -60%);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+
+            &.has-transition {
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
 
             &.is-active {
                 pointer-events: auto;
@@ -417,7 +421,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
 
-    @media (min-width: 420px) {
+    @media (min-width: 620px) {
         flex-direction: row-reverse;
     }
 
