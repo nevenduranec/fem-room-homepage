@@ -13,7 +13,7 @@ module.exports = {
          * Remove unused CSS
          */
         purgecss({
-            content: ['./**/*.html'],
+            content: ['./**/*.html', './**/*.js'],
         }),
         /*
          * Adds vendor prefixes to css attributes
